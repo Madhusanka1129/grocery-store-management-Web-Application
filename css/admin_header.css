@@ -1,0 +1,544 @@
+/* admin_header.css - Admin Header Component Styles */
+
+/* Header Container */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.3);
+    transition: all 0.3s ease;
+}
+
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Logo Styling */
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo span {
+    color: #3498db;
+    margin-left: 0.3rem;
+    font-weight: 800;
+}
+
+.header .logo:hover {
+    color: #f1f1f1;
+    transform: scale(1.02);
+}
+
+/* Admin Badge */
+.header .logo::after {
+    content: 'ADMIN';
+    font-size: 0.8rem;
+    background: #e74c3c;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Navigation Styling */
+.header .navbar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    color: #bdc3c7;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+}
+
+.header .navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: width 0.3s ease;
+}
+
+.header .navbar a:hover {
+    color: #fff;
+    background: rgba(52, 152, 219, 0.1);
+}
+
+.header .navbar a:hover::after {
+    width: 100%;
+}
+
+.header .navbar a.active {
+    color: #3498db;
+    font-weight: 600;
+}
+
+.header .navbar a.active::after {
+    width: 100%;
+}
+
+/* Icons Styling */
+.header .icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .icons div {
+    font-size: 2.2rem;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .icons div:hover {
+    color: #3498db;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.header .icons #menu-btn {
+    display: none;
+}
+
+/* Profile Dropdown */
+.header .profile {
+    position: absolute;
+    top: 120%;
+    right: 2rem;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.3);
+    width: 30rem;
+    padding: 2rem;
+    text-align: center;
+    overflow: hidden;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform 0.3s ease;
+    z-index: 1001;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header .profile.active {
+    transform: scale(1);
+}
+
+.header .profile img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.3);
+}
+
+.header .profile p {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.header .profile .admin-badge {
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.header .profile .btn,
+.header .profile .delete-btn {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.header .profile .btn {
+    background: #3498db;
+    color: #fff;
+    border: none;
+}
+
+.header .profile .btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.header .profile .delete-btn {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+}
+
+.header .profile .delete-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.header .profile .flex-btn {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header .profile .flex-btn .option-btn {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.header .profile .flex-btn .option-btn:hover {
+    background: #3498db;
+    color: #fff;
+    border-color: #3498db;
+    transform: translateY(-2px);
+}
+
+/* Admin Notifications */
+.header .notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #e74c3c;
+    color: #fff;
+    font-size: 1rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* Messages/Notifications */
+.message {
+    position: fixed;
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1200px;
+    width: 90%;
+    background-color: #3498db;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.2);
+    animation: slideDown 0.3s ease-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+.message span {
+    font-size: 1.6rem;
+    color: #fff;
+    flex: 1;
+}
+
+.message i {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+.message i:hover {
+    color: #f1c40f;
+    transform: rotate(90deg);
+}
+
+/* Quick Stats (Optional) */
+.header .quick-stats {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    min-width: 80px;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    color: #3498db;
+    font-weight: 700;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    color: #bdc3c7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem;
+    }
+    
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #16213e;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        flex-direction: column;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: all 0.3s ease;
+        padding: 0;
+    }
+    
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .header .navbar a {
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        font-size: 2rem;
+        width: calc(100% - 2rem);
+        text-align: center;
+        border-radius: 0.5rem;
+    }
+    
+    .header .navbar a::after {
+        display: none;
+    }
+    
+    .header .icons #menu-btn {
+        display: inline-block;
+    }
+    
+    .header .profile {
+        right: 1rem;
+        width: 90%;
+        max-width: 30rem;
+    }
+    
+    .quick-stats {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .logo {
+        font-size: 2.2rem;
+    }
+    
+    .header .icons {
+        gap: 1rem;
+    }
+    
+    .header .icons div {
+        font-size: 2rem;
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .header .logo {
+        font-size: 2rem;
+    }
+    
+    .header .logo::after {
+        font-size: 0.6rem;
+        padding: 0.1rem 0.3rem;
+    }
+    
+    .message {
+        padding: 1rem 1.5rem;
+    }
+    
+    .message span {
+        font-size: 1.4rem;
+    }
+    
+    .message i {
+        font-size: 1.8rem;
+    }
+    
+    .header .profile {
+        width: 95%;
+        right: 50%;
+        transform: translateX(50%) scale(0);
+    }
+    
+    .header .profile.active {
+        transform: translateX(50%) scale(1);
+    }
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header .profile {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Hover Effects Enhancement */
+.header .navbar a:hover,
+.header .icons div:hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Accessibility */
+.header .navbar a:focus,
+.header .icons div:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+.header .profile .btn:focus,
+.header .profile .delete-btn:focus,
+.header .profile .option-btn:focus {
+    outline: 2px solid #2980b9;
+    outline-offset: 2px;
+}
+
+/* Loading State for Icons */
+.header .icons div.loading {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Scroll Behavior */
+.header.scrolled {
+    padding: 1rem 2rem;
+    box-shadow: 0 0.3rem 0.5rem rgba(0,0,0,.2);
+}
+
+/* Dark Mode Toggle (Optional) */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #bdc3c7;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.dark-mode-toggle i {
+    font-size: 1.6rem;
+}
+
+/* Version Info */
+.header .version {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-left: 0.5rem;
+    font-weight: 300;
+}

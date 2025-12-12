@@ -1,0 +1,518 @@
+/* about.css - About Page Styles */
+
+/* About Section */
+.about {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f9f9f9 0%, #f1f8e9 100%);
+    margin-top: 6.5rem;
+    min-height: calc(100vh - 6.5rem);
+}
+
+.about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.about .row {
+    margin-bottom: 5rem;
+}
+
+.about .box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0f2e9;
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about .box:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: var(--green);
+}
+
+.about .box img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    margin-bottom: 2.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.about .box:hover img {
+    transform: scale(1.05);
+}
+
+.about .box h3 {
+    font-size: 2.4rem;
+    color: var(--green);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.about .box h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--green);
+    border-radius: 2px;
+}
+
+.about .box p {
+    font-size: 1.6rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.about .box .btn {
+    background: var(--green);
+    color: #fff;
+    border: none;
+    padding: 1.2rem 3rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: auto;
+    margin-top: auto;
+}
+
+.about .box .btn:hover {
+    background: var(--dark-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+
+/* Reviews Section */
+.reviews {
+    padding: 6rem 0;
+    background: #fff;
+}
+
+.reviews .title {
+    text-align: center;
+    margin-bottom: 5rem;
+    position: relative;
+    font-size: 3.5rem;
+    color: var(--black);
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+}
+
+.reviews .title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: 4px;
+    background: linear-gradient(90deg, var(--green), var(--dark-color));
+    border-radius: 2px;
+}
+
+.reviews .box {
+    background: #f9f9f9;
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--green);
+    background: #fff;
+}
+
+.reviews .box img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.reviews .box:hover img {
+    transform: scale(1.1);
+    border-color: var(--green);
+}
+
+.reviews .box p {
+    font-size: 1.6rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-style: italic;
+    position: relative;
+    padding: 0 1rem;
+    flex-grow: 1;
+}
+
+.reviews .box p::before,
+.reviews .box p::after {
+    content: '"';
+    font-size: 3rem;
+    color: var(--green);
+    font-family: serif;
+    opacity: 0.5;
+}
+
+.reviews .box p::before {
+    margin-right: 5px;
+}
+
+.reviews .box p::after {
+    margin-left: 5px;
+}
+
+.reviews .stars {
+    color: #f1c40f;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.reviews .stars i {
+    margin: 0 2px;
+}
+
+.reviews .box h3 {
+    font-size: 2rem;
+    color: var(--black);
+    font-weight: 600;
+    margin-top: auto;
+}
+
+/* Mission & Vision Section (Optional) */
+.mission-vision {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+.mission-vision .title {
+    text-align: center;
+    margin-bottom: 5rem;
+    position: relative;
+    font-size: 3.5rem;
+    color: var(--black);
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+}
+
+.mission-vision .title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: 4px;
+    background: linear-gradient(90deg, var(--green), var(--dark-color));
+    border-radius: 2px;
+}
+
+.mission-vision .icon-box {
+    text-align: center;
+    padding: 3rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.mission-vision .icon-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.mission-vision .icon-box i {
+    font-size: 5rem;
+    color: var(--green);
+    margin-bottom: 2rem;
+}
+
+.mission-vision .icon-box h3 {
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.mission-vision .icon-box p {
+    font-size: 1.6rem;
+    color: var(--light-color);
+    line-height: 1.8;
+}
+
+/* Statistics Section (Optional) */
+.stats {
+    padding: 6rem 0;
+    background: var(--green);
+    color: #fff;
+}
+
+.stats .stat-box {
+    text-align: center;
+    padding: 2rem;
+}
+
+.stats .stat-number {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.stats .stat-label {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* Team Section (Optional) */
+.team {
+    padding: 6rem 0;
+    background: #f9f9f9;
+}
+
+.team .title {
+    text-align: center;
+    margin-bottom: 5rem;
+    position: relative;
+    font-size: 3.5rem;
+    color: var(--black);
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+}
+
+.team .title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: 4px;
+    background: linear-gradient(90deg, var(--green), var(--dark-color));
+    border-radius: 2px;
+}
+
+.team .member-box {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.team .member-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.team .member-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.team .member-info {
+    padding: 2rem;
+}
+
+.team .member-name {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.team .member-role {
+    font-size: 1.4rem;
+    color: var(--green);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.team .member-desc {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease backwards;
+}
+
+/* Stagger animations */
+.reviews .box:nth-child(1) { animation-delay: 0.1s; }
+.reviews .box:nth-child(2) { animation-delay: 0.2s; }
+.reviews .box:nth-child(3) { animation-delay: 0.3s; }
+.reviews .box:nth-child(4) { animation-delay: 0.4s; }
+.reviews .box:nth-child(5) { animation-delay: 0.5s; }
+.reviews .box:nth-child(6) { animation-delay: 0.6s; }
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+    .about .box img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 991px) {
+    .about,
+    .reviews {
+        padding: 4rem 0;
+    }
+    
+    .about .box,
+    .reviews .box {
+        padding: 2.5rem;
+    }
+    
+    .about .box h3,
+    .reviews .title,
+    .mission-vision .title,
+    .team .title {
+        font-size: 3rem;
+    }
+    
+    .reviews .box img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about .row {
+        margin-bottom: 3rem;
+    }
+    
+    .about .box {
+        margin-bottom: 2rem;
+    }
+    
+    .reviews .box {
+        margin-bottom: 2rem;
+    }
+    
+    .about .box h3,
+    .reviews .title,
+    .mission-vision .title,
+    .team .title {
+        font-size: 2.5rem;
+    }
+    
+    .about .box p,
+    .reviews .box p {
+        font-size: 1.5rem;
+    }
+    
+    .stats .stat-number {
+        font-size: 3rem;
+    }
+    
+    .stats .stat-label {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about,
+    .reviews {
+        padding: 3rem 0;
+    }
+    
+    .about .box,
+    .reviews .box {
+        padding: 2rem;
+    }
+    
+    .about .box img {
+        height: 180px;
+    }
+    
+    .about .box h3,
+    .reviews .title,
+    .mission-vision .title,
+    .team .title {
+        font-size: 2.2rem;
+    }
+    
+    .reviews .box img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .reviews .stars {
+        font-size: 1.6rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .about,
+    .reviews {
+        margin-top: 0;
+        padding: 2rem 0;
+        background: #fff !important;
+    }
+    
+    .about .box,
+    .reviews .box {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        break-inside: avoid;
+    }
+    
+    .about .box:hover,
+    .reviews .box:hover {
+        transform: none;
+    }
+    
+    .btn {
+        display: none !important;
+    }
+}

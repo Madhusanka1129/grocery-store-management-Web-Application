@@ -1,0 +1,456 @@
+/* footer.css - Footer Component Styles */
+
+.footer {
+    background: linear-gradient(135deg, var(--black) 0%, #222 100%);
+    padding: 5rem 9% 2rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--green), var(--dark-color));
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.footer .box {
+    padding: 2rem;
+    text-align: left;
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+.footer .box:nth-child(1) { animation-delay: 0.1s; }
+.footer .box:nth-child(2) { animation-delay: 0.2s; }
+.footer .box:nth-child(3) { animation-delay: 0.3s; }
+.footer .box:nth-child(4) { animation-delay: 0.4s; }
+
+.footer .box h3 {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer .box h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--green);
+    border-radius: 2px;
+}
+
+.footer .box a,
+.footer .box p {
+    display: block;
+    font-size: 1.5rem;
+    color: #bbb;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+.footer .box a:hover {
+    color: var(--green);
+    transform: translateX(10px);
+}
+
+.footer .box a i {
+    color: var(--green);
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.footer .box a:hover i {
+    transform: rotate(360deg);
+    color: #fff;
+}
+
+.footer .box p i {
+    color: var(--green);
+    margin-right: 1rem;
+    font-size: 1.6rem;
+    width: 20px;
+    text-align: center;
+}
+
+.footer .box .social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.footer .box .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    font-size: 1.6rem;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.footer .box .social-links a:hover {
+    background: var(--green);
+    color: #fff;
+    transform: translateY(-5px) rotate(360deg);
+}
+
+.footer .box .social-links a.facebook:hover {
+    background: #1877f2;
+}
+
+.footer .box .social-links a.twitter:hover {
+    background: #1da1f2;
+}
+
+.footer .box .social-links a.instagram:hover {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.footer .box .social-links a.linkedin:hover {
+    background: #0077b5;
+}
+
+.footer .credit {
+    text-align: center;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.6rem;
+    color: #bbb;
+    position: relative;
+}
+
+.footer .credit span {
+    color: var(--green);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer .credit::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: var(--green);
+}
+
+/* Newsletter Subscription (Optional) */
+.footer .newsletter {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer .newsletter h3 {
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.footer .newsletter p {
+    font-size: 1.6rem;
+    color: #bbb;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer .newsletter form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer .newsletter input[type="email"] {
+    flex: 1;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.footer .newsletter input[type="email"]:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--green);
+    box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.2);
+}
+
+.footer .newsletter input[type="email"]::placeholder {
+    color: #999;
+}
+
+.footer .newsletter button {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.6rem;
+    background: var(--green);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer .newsletter button:hover {
+    background: var(--dark-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--green);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--dark-color);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Payment Methods (Optional) */
+.footer .payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer .payment-methods img {
+    height: 30px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.footer .payment-methods img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .footer {
+        padding: 4rem 2rem 2rem;
+    }
+    
+    .footer .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 2rem;
+    }
+    
+    .footer .newsletter form {
+        flex-direction: column;
+    }
+    
+    .footer .newsletter input[type="email"],
+    .footer .newsletter button {
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer .box-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer .box h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer .box .social-links {
+        justify-content: center;
+    }
+    
+    .footer .payment-methods {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer {
+        padding: 3rem 1.5rem 1.5rem;
+    }
+    
+    .footer .box {
+        padding: 1rem;
+    }
+    
+    .footer .box h3 {
+        font-size: 2rem;
+    }
+    
+    .footer .box a,
+    .footer .box p {
+        font-size: 1.4rem;
+    }
+    
+    .footer .credit {
+        font-size: 1.4rem;
+        padding-top: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+}
+
+/* Hover Effects for Links */
+.footer .box a {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.footer .box a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.footer .box a:hover::before {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+}
+
+/* Map Integration (Optional) */
+.footer .map-container {
+    grid-column: 1 / -1;
+    margin-top: 3rem;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer .map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    filter: grayscale(100%) invert(90%);
+}
+
+/* Business Hours (Optional) */
+.footer .box.hours p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer .box.hours p:last-child {
+    border-bottom: none;
+}
+
+.footer .box.hours span {
+    color: var(--green);
+    font-weight: 600;
+}

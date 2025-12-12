@@ -1,0 +1,458 @@
+/* header.css - Header Component Styles */
+
+/* Header Container */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+}
+
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Logo Styling */
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--black);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo span {
+    color: var(--green);
+    margin-left: 0.3rem;
+}
+
+.header .logo:hover {
+    color: var(--dark-color);
+}
+
+/* Navigation Styling */
+.header .navbar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    color: var(--light-color);
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.header .navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--green);
+    transition: width 0.3s ease;
+}
+
+.header .navbar a:hover {
+    color: var(--green);
+}
+
+.header .navbar a:hover::after {
+    width: 100%;
+}
+
+.header .navbar a.active {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.header .navbar a.active::after {
+    width: 100%;
+}
+
+/* Icons Styling */
+.header .icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .icons div,
+.header .icons a {
+    font-size: 2.2rem;
+    color: var(--black);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.header .icons div:hover,
+.header .icons a:hover {
+    color: var(--green);
+    transform: scale(1.1);
+}
+
+.header .icons span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--green);
+    color: #fff;
+    font-size: 1.2rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.header .icons #menu-btn {
+    display: none;
+}
+
+/* Profile Dropdown */
+.header .profile {
+    position: absolute;
+    top: 120%;
+    right: 2rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.1);
+    width: 30rem;
+    padding: 2rem;
+    text-align: center;
+    overflow: hidden;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform 0.3s ease;
+    z-index: 1001;
+}
+
+.header .profile.active {
+    transform: scale(1);
+}
+
+.header .profile img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 0.5rem solid #f7f7f7;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+
+.header .profile p {
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.header .profile .btn,
+.header .profile .delete-btn {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.header .profile .btn {
+    background: var(--green);
+    color: #fff;
+}
+
+.header .profile .btn:hover {
+    background: var(--dark-color);
+    transform: translateY(-2px);
+}
+
+.header .profile .delete-btn {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.header .profile .delete-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+.header .profile .flex-btn {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.header .profile .flex-btn .option-btn {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    background: #f8f9fa;
+    color: var(--black);
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.header .profile .flex-btn .option-btn:hover {
+    background: var(--green);
+    color: #fff;
+    border-color: var(--green);
+}
+
+/* Messages/Notifications */
+.message {
+    position: fixed;
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1200px;
+    width: 90%;
+    background-color: var(--green);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.2);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+.message span {
+    font-size: 1.6rem;
+    color: #fff;
+    flex: 1;
+}
+
+.message i {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+.message i:hover {
+    color: #f1c40f;
+    transform: rotate(90deg);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem;
+    }
+    
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: var(--border);
+        border-bottom: var(--border);
+        flex-direction: column;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: all 0.3s ease;
+        padding: 0;
+    }
+    
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .header .navbar a {
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+        background: #f7f7f7;
+        font-size: 2rem;
+        width: calc(100% - 2rem);
+        text-align: center;
+    }
+    
+    .header .navbar a::after {
+        display: none;
+    }
+    
+    .header .icons #menu-btn {
+        display: inline-block;
+    }
+    
+    .header .profile {
+        right: 1rem;
+        width: 90%;
+        max-width: 30rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .logo {
+        font-size: 2.2rem;
+    }
+    
+    .header .icons {
+        gap: 1rem;
+    }
+    
+    .header .icons div,
+    .header .icons a {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .header .logo {
+        font-size: 2rem;
+    }
+    
+    .header .icons span {
+        width: 18px;
+        height: 18px;
+        font-size: 1rem;
+        top: -8px;
+        right: -8px;
+    }
+    
+    .message {
+        padding: 1rem 1.5rem;
+    }
+    
+    .message span {
+        font-size: 1.4rem;
+    }
+    
+    .message i {
+        font-size: 1.8rem;
+    }
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header .profile {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Hover Effects Enhancement */
+.header .navbar a:hover,
+.header .icons div:hover,
+.header .icons a:hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Accessibility */
+.header .navbar a:focus,
+.header .icons div:focus,
+.header .icons a:focus {
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
+}
+
+.header .profile .btn:focus,
+.header .profile .delete-btn:focus,
+.header .profile .option-btn:focus {
+    outline: 2px solid var(--dark-color);
+    outline-offset: 2px;
+}
+
+/* Loading State for Icons */
+.header .icons a.loading span {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Scroll Behavior */
+.header.scrolled {
+    padding: 1rem 2rem;
+    box-shadow: 0 0.3rem 0.5rem rgba(0,0,0,.1);
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+    .header {
+        background: var(--black);
+        color: #fff;
+    }
+    
+    .header .logo,
+    .header .navbar a,
+    .header .icons div,
+    .header .icons a {
+        color: #fff;
+    }
+    
+    .header .profile {
+        background: var(--black);
+        color: #fff;
+    }
+    
+    .header .profile p {
+        color: #fff;
+    }
+    
+    .header .profile .option-btn {
+        background: #333;
+        color: #fff;
+        border-color: #444;
+    }
+}

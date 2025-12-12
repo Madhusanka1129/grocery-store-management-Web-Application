@@ -1,0 +1,296 @@
+/* shop.css - Shop Page Styles ONLY */
+
+/* Shop Category Navigation */
+.p-category {
+    padding: 3rem 9%;
+    background: linear-gradient(135deg, var(--green) 0%, var(--dark-color) 100%);
+    margin-top: 6.5rem;
+    text-align: center;
+}
+
+.p-category a {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    margin: 0.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.p-category a:hover {
+    background: #fff;
+    color: var(--green);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: #fff;
+}
+
+/* Shop Products Section */
+.products {
+    padding: 5rem 9%;
+    background: #f9f9f9;
+}
+
+.products .title {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    font-size: 3.5rem;
+    color: var(--black);
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+}
+
+.products .title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: 4px;
+    background: linear-gradient(90deg, var(--green), var(--dark-color));
+    border-radius: 2px;
+}
+
+.products .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.products .box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2.5rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 1px solid #eee;
+}
+
+.products .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--green);
+}
+
+.products .box .price {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: linear-gradient(135deg, var(--green), var(--dark-color));
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    z-index: 10;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.products .box .price span {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.products .box .fas.fa-eye {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    background: var(--black);
+    color: #fff;
+    font-size: 2.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.products .box .fas.fa-eye:hover {
+    background: var(--green);
+    transform: rotate(360deg) scale(1.1);
+}
+
+.products .box img {
+    height: 20rem;
+    width: 100%;
+    object-fit: contain;
+    margin: 2rem 0;
+    transition: all 0.3s ease;
+    padding: 1rem;
+}
+
+.products .box:hover img {
+    transform: scale(1.05);
+}
+
+.products .box .name {
+    font-size: 2.2rem;
+    color: var(--black);
+    margin: 1.5rem 0;
+    font-weight: 600;
+    line-height: 1.4;
+    min-height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products .box .qty {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    background: #f7f7f7;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    border: 2px solid #eee;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.products .box .qty:focus {
+    border-color: var(--green);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+    outline: none;
+}
+
+.products .box input[type="submit"] {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.products .box .option-btn {
+    background: #f39c12;
+    color: #fff;
+    border: none;
+}
+
+.products .box .option-btn:hover {
+    background: #e67e22;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+.products .box .btn {
+    background: var(--green);
+    color: #fff;
+    border: none;
+}
+
+.products .box .btn:hover {
+    background: var(--dark-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+
+/* Empty State */
+.empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 5rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.empty p {
+    font-size: 2.2rem;
+    color: var(--light-color);
+    margin-bottom: 2rem;
+}
+
+.empty .btn {
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .p-category {
+        padding: 2rem;
+    }
+    
+    .products {
+        padding: 3rem 2rem;
+    }
+    
+    .products .box-container {
+        grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .p-category a {
+        display: block;
+        margin: 1rem auto;
+        max-width: 300px;
+    }
+    
+    .products .box-container {
+        grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    }
+    
+    .products .box .name {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .products .box-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .products .box {
+        padding: 2rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.products .box {
+    animation: fadeIn 0.5s ease backwards;
+}
+
+/* Stagger animation for boxes */
+.products .box:nth-child(1) { animation-delay: 0.1s; }
+.products .box:nth-child(2) { animation-delay: 0.2s; }
+.products .box:nth-child(3) { animation-delay: 0.3s; }
+.products .box:nth-child(4) { animation-delay: 0.4s; }
+.products .box:nth-child(5) { animation-delay: 0.5s; }
+.products .box:nth-child(6) { animation-delay: 0.6s; }
+.products .box:nth-child(7) { animation-delay: 0.7s; }
+.products .box:nth-child(8) { animation-delay: 0.8s; }

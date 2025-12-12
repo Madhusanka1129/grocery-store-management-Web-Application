@@ -1,0 +1,609 @@
+/* admin_update.css - Admin Update Product Page Styles */
+
+/* Update Product Section */
+.update-product {
+    padding: 5rem 9%;
+    min-height: calc(100vh - 6.5rem);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    margin-top: 6.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.update-product .title {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    font-size: 3.5rem;
+    color: #1a1a2e;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+}
+
+.update-product .title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: 4px;
+    background: linear-gradient(90deg, #f39c12, #e67e22);
+    border-radius: 2px;
+}
+
+.update-product form {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 4rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e3f2fd;
+    transition: all 0.4s ease;
+    animation: fadeIn 0.6s ease;
+}
+
+.update-product form:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border-color: #f39c12;
+}
+
+.update-product form img {
+    display: block;
+    margin: 0 auto 3rem;
+    height: 25rem;
+    width: 25rem;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 5px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.update-product form:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.update-product .box {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+    color: #2c3e50;
+    background: #f8f9fa;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.update-product .box:focus {
+    background: #fff;
+    border-color: #f39c12;
+    box-shadow: 0 0 0 4px rgba(243, 156, 18, 0.1);
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.update-product .box::placeholder {
+    color: #95a5a6;
+}
+
+.update-product select.box {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 2rem center;
+    background-size: 1.5rem;
+    padding-right: 4.5rem;
+}
+
+.update-product textarea.box {
+    min-height: 150px;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.6;
+    width: 100%;
+}
+
+/* File Input Styling */
+.update-product .box[type="file"] {
+    padding: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    background: #f8f9fa;
+    border: 2px dashed rgba(243, 156, 18, 0.3);
+}
+
+.update-product .box[type="file"]::before {
+    content: 'Choose New Product Image';
+    display: inline-block;
+    color: #95a5a6;
+    margin-right: 1rem;
+}
+
+.update-product .box[type="file"]:hover {
+    background: rgba(243, 156, 18, 0.05);
+    border-color: #f39c12;
+}
+
+/* Image Preview Container */
+.image-preview-container {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.current-image-label {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.current-image-label span {
+    color: #f39c12;
+    font-weight: 700;
+}
+
+/* Image Comparison (Optional) */
+.image-comparison {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border: 1px solid #e3f2fd;
+}
+
+.image-old,
+.image-new {
+    flex: 1;
+    text-align: center;
+}
+
+.image-label {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.image-old img {
+    border: 3px solid #e74c3c;
+}
+
+.image-new img {
+    border: 3px dashed #2ecc71;
+}
+
+/* Product Info Summary */
+.product-info-summary {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border: 1px solid #e3f2fd;
+}
+
+.product-info-summary h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-info-summary h3 i {
+    color: #f39c12;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+}
+
+.info-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #f39c12;
+}
+
+.info-label {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.info-value {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Action Buttons */
+.update-product .flex-btn {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.update-product .btn,
+.update-product .option-btn {
+    flex: 1;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.update-product .btn {
+    background: #f39c12;
+    color: #fff;
+}
+
+.update-product .btn:hover {
+    background: #e67e22;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+.update-product .option-btn {
+    background: #3498db;
+    color: #fff;
+}
+
+.update-product .option-btn:hover {
+    background: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Empty State */
+.update-product .empty {
+    text-align: center;
+    padding: 6rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e3f2fd;
+    max-width: 700px;
+    width: 100%;
+    animation: fadeIn 0.6s ease;
+}
+
+.update-product .empty i {
+    font-size: 6rem;
+    color: #bdc3c7;
+    margin-bottom: 2rem;
+}
+
+.update-product .empty p {
+    font-size: 2.4rem;
+    color: #7f8c8d;
+    margin-bottom: 3rem;
+}
+
+.update-product .empty .btn {
+    padding: 1.2rem 4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: #3498db;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.update-product .empty .btn:hover {
+    background: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Form Validation */
+.update-product .box.error {
+    border-color: #e74c3c;
+    background: rgba(231, 76, 60, 0.05);
+}
+
+.update-product .error-message {
+    color: #e74c3c;
+    font-size: 1.4rem;
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    background: rgba(231, 76, 60, 0.1);
+    border-radius: 5px;
+    border-left: 3px solid #e74c3c;
+}
+
+.update-product .box.success {
+    border-color: #2ecc71;
+    background: rgba(46, 204, 113, 0.05);
+}
+
+.update-product .success-message {
+    color: #2ecc71;
+    font-size: 1.4rem;
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    background: rgba(46, 204, 113, 0.1);
+    border-radius: 5px;
+    border-left: 3px solid #2ecc71;
+}
+
+/* Product Status Toggle */
+.status-toggle {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.status-toggle label {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    font-weight: 600;
+    flex: 1;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: #2ecc71;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(30px);
+}
+
+/* Loading State */
+.update-product form.loading .btn {
+    position: relative;
+    color: transparent;
+}
+
+.update-product form.loading .btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(243, 156, 18, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(243, 156, 18, 0);
+    }
+}
+
+.update-product form {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .update-product {
+        padding: 4rem 2rem;
+    }
+    
+    .update-product .title {
+        font-size: 3rem;
+    }
+    
+    .update-product form {
+        padding: 3rem;
+    }
+    
+    .update-product form img {
+        height: 20rem;
+        width: 20rem;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .image-comparison {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .update-product .title {
+        font-size: 2.5rem;
+    }
+    
+    .update-product form {
+        padding: 2.5rem;
+    }
+    
+    .update-product .box {
+        padding: 1.2rem 1.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .update-product .btn,
+    .update-product .option-btn {
+        padding: 1.2rem;
+        font-size: 1.5rem;
+    }
+    
+    .update-product .flex-btn {
+        flex-direction: column;
+    }
+    
+    .update-product .empty {
+        padding: 4rem 2rem;
+    }
+    
+    .update-product .empty p {
+        font-size: 2rem;
+    }
+    
+    .update-product .empty i {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .update-product {
+        padding: 3rem 1.5rem;
+    }
+    
+    .update-product form {
+        padding: 2rem;
+    }
+    
+    .update-product .title {
+        font-size: 2.2rem;
+    }
+    
+    .update-product form img {
+        height: 18rem;
+        width: 18rem;
+    }
+    
+    .product-info-summary {
+        padding: 1.5rem;
+    }
+}
+
+/* Accessibility */
+.update-product .btn:focus-visible {
+    outline: 2px solid #e67e22;
+    outline-offset: 2px;
+}
+
+.update-product .option-btn:focus-visible {
+    outline: 2px solid #2980b9;
+    outline-offset: 2px;
+}
+
+.update-product .box:focus-visible {
+    outline: 2px solid #f39c12;
+    outline-offset: 2px;
+}
+
+.toggle-switch input:focus-visible + .toggle-slider {
+    outline: 2px solid #f39c12;
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .update-product {
+        margin-top: 0;
+        padding: 2rem 0;
+        background: #fff !important;
+    }
+    
+    .update-product form {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .update-product .btn,
+    .update-product .option-btn,
+    .update-product .box[type="file"] {
+        display: none;
+    }
+    
+    .update-product .title::after {
+        display: none;
+    }
+}
